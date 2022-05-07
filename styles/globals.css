@@ -1,15 +1,78 @@
+/* Fonts: Cormorant, Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,600;1,500&family=Raleway:wght@300&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* colors */
+  --black: 0, 0%, 6%;
+  --dark-brown: 11, 19%, 12%;
+  --brown: 20, 20%, 32%;
+  --light-brown: 23, 25%, 61%;
+  --white: 17, 30%, 95%;
+
+  /* fonts */
+  --ff-primary: 'Cormorant', serif;
+  --ff-secondary: 'Raleway', sans-serif;
+
+}
+
 html,
 body, * {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
+  background-color: var(--white);
+}
 
+body h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ff-primary);
+}
+
+body p, li, a, button {
+  font-family: var(--ff-secondary);
 }
 
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.black-bg {
+  background-color: hsl(var(--black));
+}
+
+.black-text {
+  color: hsl(var(--black));
+}
+
+.dark-brown-bg {
+  background-color: hsl(var(--dark-brown));
+}
+
+.dark-brown-text {
+  color: hsl(var(--dark-brown));
+}
+
+.brown-text {
+  color: hsl(var(--brown));
+}
+
+.light-brown-text {
+  color: hsl(var(--light-brown));
+}
+
+.light-brown-bg {
+  background-color: hsl(var(--light-brown));
+}
+
+.white-bg {
+  color: hsl(var(--white));
+}
+
+.white-text {
+  color: hsl(var(--white));
 }
 
 a {
