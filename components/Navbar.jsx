@@ -11,7 +11,7 @@ function Navbar() {
                 <ul className="flex flex-row justify-between items-center">
                     {['Home', 'Fragrances', 'Collection'].map((item) => (
                         <Link href="" key={item}>
-                            <li className="mx-10 text-xs uppercase tracking-wider cursor-pointer">{item}</li>
+                            <li className="mx-10 text-xs uppercase tracking-widest cursor-pointer">{item}</li>
                         </Link>
                     ))}
                 </ul>

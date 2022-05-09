@@ -11,10 +11,10 @@ function Newsletter() {
                 <div className="w-full md:w-1/2 mt-5 mx-auto">
                     <input 
                         type="email" placeholder="Email"
-                        className="bg-white p-3 rounded-l-md"
+                        className="bg-white p-3 rounded-md w-9/12 md:w-full"
                         />
                     <button 
-                    className="light-brown-bg w-24 p-3 dark-brown-text rounded-r-md cursor-pointer"
+                    className="light-brown-bg w-1/2 md:w-9/12 p-3 my-3 dark-brown-text rounded-md cursor-pointer"
                     type="submit">Sign Up</button>
                 </div>
             </div>
