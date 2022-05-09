@@ -19,7 +19,7 @@ export default function Home({ products, bannerData }) {
         <p className="light-brown-text my-2">Scents of many variations</p>
       </div>
  
-      <div className="flex flex-col md:flex-row justify-center items-center px-10">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-start px-10">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
@@ -31,7 +31,7 @@ export default function Home({ products, bannerData }) {
         <p className="light-brown-text my-2">2022 Collection</p>
       </div>
  
-      <div className="flex flex-col md:flex-row justify-center items-center px-10">
+      <div className="flex flex-col md:flex-row justify-center items-center md:items-start px-10">
         {products?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
