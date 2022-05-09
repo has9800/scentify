@@ -13,8 +13,8 @@ function Product({ product: {
     return (
         <div>
             <Link href={`/product/${slug.current}`}>
-                <div className="product-card my-6 md:mx-6">
-                    <img src={urlFor(image && image[0])} objectFit="cover" layout="fill" alt="product" width={250} height={250} className="product-image" />
+                <div className="product-card my-7 md:mx-6">
+                    <img src={urlFor(image && image[0])} alt="product" width={250} height={250} className="product-image" />
                     <p className="product-name my-2 light-brown-text">{name}</p>
                     <p className="product-price text-black">${price}</p>
                 </div>
