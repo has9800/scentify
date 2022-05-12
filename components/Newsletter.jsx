@@ -5,7 +5,7 @@ function Newsletter() {
     return (
         <div className="text-center black-bg p-10 mt-32">
             <div className="w-full md:w-1/2 mx-auto">
-                <h3 className="text-3xl md:text-4xl light-brown-text my-2">Never miss out on a deal again!</h3>
+                <h3 className="text-3xl md:text-4xl text-white my-2">Never miss out on a deal again!</h3>
                 <p className="text-white my-5 text-lg">Sign up for our newsletter to receive gifts & offers</p>
                 <div className="w-full md:w-1/2 mt-5 mx-auto">
                     <input 
@@ -17,7 +17,7 @@ function Newsletter() {
                     type="submit">Sign Up</button>
                 </div>
             </div>
-            <p className="text-xs my-1 light-brown-text">We don't spam or share data with third parties</p>
+            <p className="text-xs my-1 text-white">We don't spam or share data with third parties</p>
         </div>
     )
 }

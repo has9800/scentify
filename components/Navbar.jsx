@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import { AiOutlineShopping } from 'react-icons/ai'
 
 function Navbar() {
     return (
@@ -16,8 +16,11 @@ function Navbar() {
                     ))}
                 </ul>
             </div>
-            <div>
-                <p className="light-brown-text">Cart</p>
+            <div className="">
+                <button type="button" onClick="" className="cart-icon">
+                    <AiOutlineShopping />
+                    <span className="cart-item-qty">10</span>
+                </button>
             </div>
         </div>
     )

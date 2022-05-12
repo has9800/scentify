@@ -10,8 +10,6 @@ import { client } from '../lib/client'
 export default function Home({ products, bannerData }) {
   return (
     <div>
-      <Navbar />
-
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
 
       <div className="text-center my-16">
@@ -38,8 +36,6 @@ export default function Home({ products, bannerData }) {
       </div>
 
       <Newsletter />
-
-      <Footer />
     </div>
   )
 }
