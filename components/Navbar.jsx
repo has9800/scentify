@@ -5,11 +5,16 @@ function Navbar() {
     return (
         <div className="black-bg white-text flex flex-row justify-between items-center md:px-20 p-7 w-full">
             <div>
-                <h1 className="text-2xl md:text-4xl">Scentify</h1>
+                <Link href="/">
+                    <h1 className="text-2xl md:text-4xl cursor-pointer">Scentify</h1>
+                </Link>
             </div>
             <div className="hidden md:block">
                 <ul className="flex flex-row justify-between items-center">
-                    {['Home', 'Fragrances', 'Collection'].map((item) => (
+                    <Link href="/">
+                        <li className="mx-10 text-xs uppercase tracking-widest cursor-pointer">Home</li>
+                    </Link>
+                    {['Fragrances', 'Collection'].map((item) => (
                         <Link href="" key={item}>
                             <li className="mx-10 text-xs uppercase tracking-widest cursor-pointer">{item}</li>
                         </Link>

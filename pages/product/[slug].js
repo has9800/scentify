@@ -10,10 +10,10 @@ import {
 // import afterPay from '../../public/assets/afterpay.png'
 
 function ProductDetails({ product, similarProducts }) {
-    const { image, name, details, price } = product;
+    const { image, name, details, price } = product; 
     
     return (
-        <div className="">
+         <div className="">
             <div className="product-detail-container flex flex-col md:flex-row md:items-center">
                 <div className="">
                     <img src={urlFor(image && image[0])} alt="fragrance" />
