@@ -1,4 +1,4 @@
-import React from 'react'
+import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai'
 
 function Footer() {
     let date = new Date().getFullYear();
@@ -9,26 +9,33 @@ function Footer() {
 
             <div className="text-gray-500 flex flex-col md:flex-row items-start justify-around">
                 <div className="my-3">
-                    <p className="font-bold mb-3 text-xl">Information Center</p>
+                    <p className="font-bold mb-3 text-xl tracking-wider">Information Center</p>
                     {["Privacy Policy", "Return Policy", "Terms & Conditions", "Customer Service"].map((item) => (
-                        <p key={item} className="my-2 cursor-pointer">{item}</p>
+                        <p key={item} className="my-4 d cursor-pointer hover:text-gray-400">{item}</p>
                     ))}
                 </div>
                 <div className="my-3">
-                    <p className="font-bold mb-3 text-xl">About</p>
+                    <p className="font-bold mb-3 text-xl tracking-wider">About Us</p>
                     {["Contact Us", "Company", "Careers", "Store Locator", "Newsroom", "FAQ"].map((item) => (
-                        <p key={item} className="my-2 cursor-pointer">{item}</p>
+                        <p key={item} className="my-4 cursor-pointer hover:text-gray-400">{item}</p>
                     ))}
                 </div>
                 <div className="my-3">
-                    <p className="font-bold mb-3 text-xl">Services</p>
+                    <p className="font-bold mb-3 text-xl tracking-wider">Services</p>
                     {["Shipping", "Same-day Delivery", "Curbside Pickup", "Returns", "Track Order", "Request Item"].map((item) => (
-                        <p key={item} className="my-2 cursor-pointer">{item}</p>
+                        <p key={item} className="my-4 cursor-pointer hover:text-gray-400">{item}</p>
                     ))}
                 </div>
             </div>
-
-            <p className="text-gray-500 md:text-center mt-20 text-sm">Copyright - Scentify {date}</p>
+            <div className="flex flex-col md:flex-row justify-center items-start md:justify-around md:items-center">
+                <div>
+                    <p className="text-gray-500 md:text-center mt-20 text-sm">Copyright - Scentify {date}</p>
+                </div>
+                <div className="flex flex-row items-start justify-center mt-2 md:mt-20">
+                    <AiFillInstagram className="light-brown-text mr-5 cursor-pointer hover:transition-all hover:scale-125" />
+                    <AiOutlineTwitter className="light-brown-text cursor-pointer hover:transition-all hover:scale-125" />
+                </div>
+            </div>
         </div>
     )
 }

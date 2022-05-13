@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-// import random from '../public/assets/jess-bailey-NaTza96eJm0-unsplash.jpg'
-// import random from '../public/assets/v.png'
-import random from '../public/assets/dior.jpg'
+import diorBanner from '../public/assets/dior.jpg'
 
 function HeroBanner({ heroBanner }) {
     return (
@@ -32,7 +30,7 @@ function HeroBanner({ heroBanner }) {
             </div>
             <div className="w-full md:w-1/2 relative">
                 <div className="w-full h-full mt-[499px] md:mt-0">
-                    <Image src={random} alt="fragrance" objectFit="cover" layout="fill" width={100} height={100} />
+                    <Image src={diorBanner} alt="fragrance" objectFit="cover" layout="fill" />
                 </div>
             </div>
         </div>

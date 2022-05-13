@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import { AiOutlineShopping } from 'react-icons/ai'
 
 function Navbar() {
     return (
@@ -11,13 +11,16 @@ function Navbar() {
                 <ul className="flex flex-row justify-between items-center">
                     {['Home', 'Fragrances', 'Collection'].map((item) => (
                         <Link href="" key={item}>
-                            <li className="mx-10 text-xs uppercase tracking-wider cursor-pointer">{item}</li>
+                            <li className="mx-10 text-xs uppercase tracking-widest cursor-pointer">{item}</li>
                         </Link>
                     ))}
                 </ul>
             </div>
-            <div>
-                <p className="light-brown-text">Cart</p>
+            <div className="">
+                <button type="button" onClick="" className="cart-icon">
+                    <AiOutlineShopping />
+                    <span className="cart-item-qty">10</span>
+                </button>
             </div>
         </div>
     )
