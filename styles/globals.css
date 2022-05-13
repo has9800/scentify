@@ -151,7 +151,7 @@ width: 100%;
   right: -8px;
   font-size: 12px;
   color: white;
-  background-color: hsl(var(--light-brown));
+  background-color: rgb(255, 65, 65);
   width: 19px;
   height: 19px;
   border-radius: 50%;
