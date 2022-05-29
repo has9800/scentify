@@ -8,6 +8,11 @@ import {
 import { client } from '../lib/client'
 
 export default function Home({ products, bannerData }) {
+  const list = products;
+  const size1 = 5;
+  const size2 = 10;
+  const firstItems = list.slice(0, size1)
+  const secondItems = list.slice(5, size2)
   return (
     <div>
       <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
@@ -18,7 +23,7 @@ export default function Home({ products, bannerData }) {
       </div>
  
       <div className="flex flex-col md:flex-row justify-center items-center md:items-start px-10">
-        {products?.map((product) => (
+        {firstItems?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>
@@ -30,7 +35,7 @@ export default function Home({ products, bannerData }) {
       </div>
  
       <div className="flex flex-col md:flex-row justify-center items-center md:items-start px-10">
-        {products?.map((product) => (
+        {secondItems?.map((product) => (
           <Product key={product._id} product={product} />
         ))}
       </div>

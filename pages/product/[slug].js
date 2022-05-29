@@ -12,7 +12,6 @@ import {
 
 function ProductDetails({ product, similarProducts }) {
     const { image, name, details, price } = product; 
-
     const { incQty, decQty, qty, onAdd } = useStateContext();
     
     return (
@@ -39,13 +38,13 @@ function ProductDetails({ product, similarProducts }) {
                     <div className="quantity mt-10">
                         <h3 className="text-xl">Quantity</h3>
                         <p className="flex flex-row items-center justify-center md:justify-start">
-                            <span className="minus light-brown-bg rounded-lg w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={decQty}>
+                            <span className="minus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={decQty}>
                                 <AiOutlineMinus className="mx-auto" />
                             </span>
                             <span className="num mx-5 text-xl" onClick="">
                                 {qty}
                             </span>
-                            <span className="plus light-brown-bg rounded-lg w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={incQty}>
+                            <span className="plus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={incQty}>
                                 <AiOutlinePlus className="mx-auto" />
                             </span>
                         </p>
