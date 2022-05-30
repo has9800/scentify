@@ -19,7 +19,8 @@ function Cart() {
         totalPrice, 
         totalQuantities, 
         cartItems, 
-        setShowCart } = useStateContext();
+        setShowCart,
+        toggleCartItemQty } = useStateContext();
 
     return (
         <div className="cart-wrapper" ref={cartRef}>
@@ -48,30 +49,30 @@ function Cart() {
                                 <div className="flex flex-row justify-between items-center">
                                     <h5 className="text-black">{item.name}</h5>
                                     <h4>${item.price}</h4>
-                                    <button type="button" className="remove-item" onClick="">
+                                    {/* <button type="button" className="remove-item" onClick="">
                                         <TiDeleteOutline />
-                                    </button>
+                                    </button> */}
                                 </div>
-                                <div className="flex flex-col">
-                                    {/* <div className="w-full">
-                                         <p className="flex flex-row justify-start items-center">
-                                            <span className="minus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick="">
+                                {/* <div className="flex flex-col">
+                                    <div className="w-full">
+                                         <p className="flex flex-row justify-between items-center">
+                                            <span className="minus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={() => toggleCartItemQty(item._id, 'dec')}>
                                                 <AiOutlineMinus className="mx-auto" />
                                             </span>
                                             <span className="num text-xl -mx-10" onClick="">
-                                                0
+                                                {item.quantity}
                                             </span>
-                                            <span className="plus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick="">
+                                            <span className="plus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={() => toggleCartItemQty(item._id, 'inc')}>
                                                 <AiOutlinePlus className="mx-auto" />
                                             </span>
                                         </p>
-                                    </div> */}
-                                </div>
+                                    </div>
+                                </div> */}
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className="bg-teal-200">
+                <div className="">
                     {cartItems.length >= 1 && (
                         <div className="cart-bottom">
                             <div className="total text-black">

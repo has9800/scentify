@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
 import { useStateContext } from '../../context/StateContext'
 import { client, urlFor } from '../../lib/client'
 import { Product } from '../../components'
@@ -8,7 +9,7 @@ import {
     AiFillStar, 
     AiOutlineStar 
 } from 'react-icons/ai'
-// import afterPay from '../../public/assets/afterpay.png'
+import afterPay from '../../public/assets/afterpay.png'
 
 function ProductDetails({ product, similarProducts }) {
     const { image, name, details, price } = product; 
@@ -35,6 +36,7 @@ function ProductDetails({ product, similarProducts }) {
                     <h4 className="text-xl mb-5">Product Details</h4>
                     <p className="md:w-2/3 mb-5 leading-7">{details}</p>
                     <p className="font-bold my-5 text-3xl">${price}</p>
+                    <p className="text-xs">Or pay in 4 installments of <span className="">${Math.round(price / 4)}/month</span> interest free using <span className="font-bold">AfterPay</span></p>
                     <div className="quantity mt-10">
                         <h3 className="text-xl">Quantity</h3>
                         <p className="flex flex-row items-center justify-center md:justify-start">

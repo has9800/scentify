@@ -88,6 +88,10 @@ a {
   font-family: var(--ff-secondary);
 }
 
+.bold-text {
+  font-weight: bolder !important;
+}
+
 .main-container{
 max-width: 1400px; 
 margin: auto;
