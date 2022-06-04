@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/image'
+import { useStateContext } from '../../context/StateContext'
 import { client, urlFor } from '../../lib/client'
 import { Product } from '../../components'
 import { 
@@ -7,10 +9,11 @@ import {
     AiFillStar, 
     AiOutlineStar 
 } from 'react-icons/ai'
-// import afterPay from '../../public/assets/afterpay.png'
+import afterPay from '../../public/assets/afterpay.png'
 
 function ProductDetails({ product, similarProducts }) {
     const { image, name, details, price } = product; 
+    const { incQty, decQty, qty, onAdd } = useStateContext();
     
     return (
          <div className="">
@@ -33,22 +36,23 @@ function ProductDetails({ product, similarProducts }) {
                     <h4 className="text-xl mb-5">Product Details</h4>
                     <p className="md:w-2/3 mb-5 leading-7">{details}</p>
                     <p className="font-bold my-5 text-3xl">${price}</p>
+                    <p className="text-xs">Or pay in 4 installments of <span className="">${Math.round(price / 4)}/month</span> interest free using <span className="font-bold">AfterPay</span></p>
                     <div className="quantity mt-10">
                         <h3 className="text-xl">Quantity</h3>
                         <p className="flex flex-row items-center justify-center md:justify-start">
-                            <span className="minus light-brown-bg rounded-lg w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick="">
+                            <span className="minus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={decQty}>
                                 <AiOutlineMinus className="mx-auto" />
                             </span>
                             <span className="num mx-5 text-xl" onClick="">
-                                0
+                                {qty}
                             </span>
-                            <span className="plus light-brown-bg rounded-lg w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick="">
+                            <span className="plus light-brown-bg rounded-sm w-16 p-1 text-white hover:scale-95 hover:transition-all hover:cursor-pointer shadow-lg" onClick={incQty}>
                                 <AiOutlinePlus className="mx-auto" />
                             </span>
                         </p>
                     </div>
                     <div className="buttons">
-                        <button type="button" className="add-to-cart mr-4" onClick="">Add to cart</button>
+                        <button type="button" className="add-to-cart mr-4" onClick={() => onAdd(product, qty)}>Add to cart</button>
                         <button type="button" className="buy-now mr-4" onClick="">Buy now</button>
                     </div>
                 </div>

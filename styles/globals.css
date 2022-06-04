@@ -80,6 +80,18 @@ a {
   text-decoration: none;
 }
 
+.primary-font {
+  font-family: var(--ff-primary);
+}
+
+.secondary-font {
+  font-family: var(--ff-secondary);
+}
+
+.bold-text {
+  font-weight: bolder !important;
+}
+
 .main-container{
 max-width: 1400px; 
 margin: auto;
@@ -151,7 +163,7 @@ width: 100%;
   right: -8px;
   font-size: 12px;
   color: white;
-  background-color: hsl(var(--light-brown));
+  background-color: rgb(255, 65, 65);
   width: 19px;
   height: 19px;
   border-radius: 50%;
@@ -393,8 +405,8 @@ text-align: end;
 }
 .cart-num-items{
   margin-left: 10px;
-  color: #f02d34;
 }
+
 .empty-cart{
   margin:40px;
   text-align:center;
@@ -426,10 +438,10 @@ padding: 20px 10px;
 .item-desc .flex{
   display: flex;
   justify-content: space-between;
-  width: 350px;
-   color: #324d67;
-
+  width: 300px;
+  color: #181818;
 }
+
 .item-desc .bottom{
   margin-top: 60px;
 }
@@ -443,10 +455,7 @@ padding: 20px 10px;
   display: flex;
   justify-content: space-between;
 }
-.total h3{
-  font-size: 22px;
 
-}
 .remove-item{
   font-size: 24px;
   color: #f02d34;
@@ -454,35 +463,37 @@ padding: 20px 10px;
   background: transparent;
   border: none;
 }
+
 .cart-bottom{
   position: absolute;
   bottom: 12px;
   right: 5px;
-width: 100%;
-padding: 30px 65px;
-
+  width: 100%;
+  padding: 15px 65px 5px;
 }
 
 .btn-container{
-  width: 400px;
+  width: 300px;
   margin: auto;
 }
+
 .btn{
   width: 100%;
   max-width: 400px;
   padding: 10px 12px;
-  border-radius: 15px;
+  border-radius: 5px;
   border: none;
-  font-size: 20px;
+  font-size: 14px;
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #f02d34;
+  background-color: hsl(var(--black));
   color: #fff;
   cursor: pointer;
-    transform: scale(1, 1);
+  transform: scale(1, 1);
   transition: transform 0.5s ease;
 }
+
 .btn:hover{
   transform: scale(1.1,1.1);
 }
@@ -620,7 +631,7 @@ padding: 6px;
 .maylike-products-wrapper h2{
   text-align: center;
   margin: 50px;
-  color: #324d67;
+  color: hsl(var(--black));
 
   font-size: 28px;
 }
@@ -794,8 +805,8 @@ margin-top: 160px;
 }
 .flex h5{
   font-size: 16px;
-   color: #324d67;
 }
+
 .flex h4{
   font-size: 16px;
    color: black;
