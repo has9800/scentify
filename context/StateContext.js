@@ -37,10 +37,7 @@ export default function StateContext({ children }) {
         toast.success(`${qty} ${product.name} added to cart`)
     }
 
-    // const onRemove = (product) => {
-        
-    // }
-
+    
     const toggleCartItemQty = (id, value) => {
         foundProduct = cartItems.find((item) => item._id === id);
         indexOfFoundProduct = cartItems.findIndex((product) => product._id === id)
@@ -59,10 +56,12 @@ export default function StateContext({ children }) {
             }
         }
     }
+    
 
     const incQty = () => {
         setQty((prevQty) => prevQty + 1)
     }
+    
 
     const decQty = () => {
         setQty((prevQty) => {
