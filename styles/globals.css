@@ -93,11 +93,11 @@ a {
 }
 
 .main-container{
-max-width: 1400px; 
-margin: auto;
-width: 100%;
-
+  max-width: 1400px; 
+  margin: auto;
+  width: 100%;
 }
+
 .layout{
   padding: 10px;
 }
@@ -764,9 +764,19 @@ margin-top: 160px;
     height: 350px;
   }
   .cart-container{
-    width: 415px;
-  padding: 4px;
+    width: 80vw;
+    height: 100vh;
+    padding: 4px;
   }
+
+  .empty-cart {
+    margin: 20px 0;
+  }
+
+  .marquee div {
+    margin: 0 8px;
+  }
+
   .cart-heading{
     margin-top: 35px;
   }
