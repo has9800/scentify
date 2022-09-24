@@ -77,7 +77,7 @@ function Cart() {
         <div className="product-container">
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
-              <div key={item._id} className="product mx-3">
+              <div key={item._id} className="product mx-1">
                 <img
                   src={urlFor(item?.image[0])}
                   alt={item._id}
@@ -85,7 +85,7 @@ function Cart() {
                 />
                 <div className="text-black flex flex-col w-full">
                   <div className="flex flex-row justify-between items-center">
-                    <h5 className="text-black ml-3">{item.name}</h5>
+                    <h5 className="text-black">{item.name}</h5>
                     <h4>${item.price}</h4>
                     {/* <button type="button" className="remove-item" onClick="">
                                         <TiDeleteOutline />
